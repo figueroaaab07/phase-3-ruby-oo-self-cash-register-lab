@@ -23,9 +23,9 @@ class CashRegister
   end
 
   def void_last_transaction
-    self.total = self.previous_total
     self.items = self.previous_items[0 .. -1]
-    self.total == 0.0 ? self.total : self.previous_total
+    # self.total == 0.0 ? self.total : self.previous_total
+    self.total = self.previous_total
   end
 
 end
